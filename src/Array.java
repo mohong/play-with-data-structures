@@ -1,10 +1,10 @@
-public class Array {
+public class Array<E> {
 
-    private int[] data;
+    private E[] data;
     private int size;
 
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (E[]) new Object[capacity];
         size = 0;
     }
 
@@ -28,7 +28,7 @@ public class Array {
      * 在所有元素后添加一个新元素
      * @param e
      */
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(size, e);
     }
 
@@ -36,7 +36,7 @@ public class Array {
      * 在所有元素前添加一个新元素
      * @param e
      */
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(0, e);
     }
 
@@ -45,7 +45,7 @@ public class Array {
      * @param index 从0开始
      * @param e
      */
-    public void add(int index, int e) {
+    public void add(int index, E e) {
         if (size == data.length) {
             throw new IllegalArgumentException("add faild. Array is full");
         }
@@ -64,7 +64,7 @@ public class Array {
      * @param index 从0开始
      * @return
      */
-    public int get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("get faild. index is illegal");
         }
@@ -76,7 +76,7 @@ public class Array {
      * @param index
      * @param e
      */
-    public void set(int index, int e) {
+    public void set(int index, E e) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("set faild. index is illegal");
         }
@@ -88,9 +88,9 @@ public class Array {
      * @param e
      * @return
      */
-    public boolean contains(int e) {
+    public boolean contains(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return true;
             }
         }
@@ -102,9 +102,9 @@ public class Array {
      * @param e
      * @return
      */
-    public int find(int e) {
+    public int find(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == e) {
+            if (data[i].equals(e)) {
                 return i;
             }
         }
@@ -116,15 +116,16 @@ public class Array {
      * @param index
      * @return
      */
-    public int remove(int index) {
+    public E remove(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("remove faild. index is illegal");
         }
-        int ret = data[index];
+        E ret = data[index];
         for (int i = index; i < size; i++) {
             data[i] = data[i + 1];
         }
         size--;
+        data[size] = null;  // 方便垃圾回收 loitering object
         return ret;
     }
 
@@ -132,7 +133,7 @@ public class Array {
      * 删除第一个元素
      * @return
      */
-    public int removeFirst() {
+    public E removeFirst() {
         return remove(0);
     }
 
@@ -140,7 +141,7 @@ public class Array {
      * 删除最后一个元素
      * @return
      */
-    public int removeLast() {
+    public E removeLast() {
         return remove(size -1);
     }
 
@@ -148,7 +149,7 @@ public class Array {
      * 删除指定元素
      * @param e
      */
-    public void removeElement(int e) {
+    public void removeElement(E e) {
         int index = find(e);
         if (index != -1) {
             remove(index);
