@@ -46,11 +46,11 @@ public class Array<E> {
      * @param e
      */
     public void add(int index, E e) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("add faild. Array is full");
-        }
         if (index < 0 || index > size ) {
             throw new IllegalArgumentException("add faild. require index >= 0 && index <= size");
+        }
+        if (size == data.length) {
+            resize(2 * data.length);
         }
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
@@ -121,11 +121,16 @@ public class Array<E> {
             throw new IllegalArgumentException("remove faild. index is illegal");
         }
         E ret = data[index];
-        for (int i = index; i < size; i++) {
-            data[i] = data[i + 1];
+        for (int i = index + 1; i < size; i++) {
+            data[i - 1] = data[i];
         }
         size--;
         data[size] = null;  // 方便垃圾回收 loitering object
+
+        if (size == data.length / 4 && data.length / 2 != 0) {
+            resize(data.length / 2);
+        }
+
         return ret;
     }
 
@@ -169,6 +174,18 @@ public class Array<E> {
         }
         res.append(']');
         return res.toString();
+    }
+
+    /**
+     * 重置数组，实现动态函数
+     * @param newCapacity
+     */
+    private void resize(int newCapacity) {
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 
 }
