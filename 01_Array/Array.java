@@ -1,3 +1,5 @@
+package stack;
+
 public class Array<E> {
 
     private E[] data;
@@ -69,6 +71,16 @@ public class Array<E> {
             throw new IllegalArgumentException("get faild. index is illegal");
         }
         return data[index];
+    }
+
+
+    public E getLast() {
+        return get(size - 1);
+    }
+
+
+    public E getFirst() {
+        return get(0);
     }
 
     /**
@@ -164,7 +176,7 @@ public class Array<E> {
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Array: size = %d, capacity= %d\n", size, data.length));
+        res.append(String.format("stack.Array: size = %d, capacity= %d\n", size, data.length));
         res.append('[');
         for (int i = 0; i < size; i++) {
             res.append(data[i]);
