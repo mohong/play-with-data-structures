@@ -1,5 +1,3 @@
-package stack;
-
 public class Array<E> {
 
     private E[] data;
