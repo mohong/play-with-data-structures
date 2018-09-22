@@ -9,7 +9,9 @@ public class Main {
 
         linkedList.addFirst(0);
 
-        System.out.println(linkedList.toString());
+        System.out.println(linkedList.removeFirst());
+
+        // System.out.println(linkedList.toString());
         System.out.println("是否为空：" + linkedList.isEmpty());
 
     }
