@@ -61,7 +61,7 @@ public class BST<E extends Comparable<E>> {
     }
     */
 
-    // 向以node为根的二分搜索树中插入元素e，递归算法
+    // 向以node为根的二分搜索树中插入元素e，递归算法(改善版)
     // 返回插入新节点后二分搜索树的根
     private Node add(Node node, E e) {
         if (node == null) {
