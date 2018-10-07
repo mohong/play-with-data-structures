@@ -15,9 +15,6 @@ public class Main {
         // 2  4     8  //
         /////////////////
 
-        bst.preOrder();
-        System.out.println();
-
-        System.out.println(bst);
+        bst.levelOrder();
     }
 }

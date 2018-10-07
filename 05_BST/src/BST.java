@@ -1,5 +1,8 @@
 // 二分搜索树
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BST<E extends Comparable<E>> {
 
     private class Node{
@@ -149,6 +152,24 @@ public class BST<E extends Comparable<E>> {
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.e);
+    }
+
+    /**
+     * 二叉树层序遍历
+     */
+    public void levelOrder() {
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node cur = q.remove();
+            System.out.println(cur.e);
+            if (cur.left != null) {
+                q.add(cur.left);
+            }
+            if (cur.right != null) {
+                q.add(cur.right);
+            }
+        }
     }
 
     @Override
