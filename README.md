@@ -2,7 +2,7 @@
 
 >Java实现常见数据结构，来源于[liuyubobobo](https://github.com/liuyubobobo/Play-with-Data-Structures)老师的课程资料
 
-## 目录
+## 代码目录
 
 - 01 数组
     - [动态数组](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java)
