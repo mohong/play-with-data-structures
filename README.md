@@ -25,12 +25,11 @@
     - [基于二分搜索树的映射](https://github.com/mohong/play-with-data-structures/blob/master/07_Map/src/BSTMap.java)
 
 
-
-## [数组](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java)
+### [数组](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java)
 
 数组最大的优点是快速查询，入score[2]，缺点是初始化后长度固定，无法动态变化。可以手动实现[动态扩展](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java#L193)。
 
-## [栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/Stack.java)
+### [栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/Stack.java)
 
 栈是一种线性结构，特点是后进先出。操作有"括号匹配"、"系统栈的调用"、"编辑器的undo操作"等。操作有"压栈弹栈"等。
 由于是线性结构，可以通过数组实现[数组栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/ArrayStack.java)，也可以通过链表实现[链表栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/LinkedListStack.java)。
@@ -40,12 +39,12 @@
 [有效的括号](https://github.com/mohong/leetcode-problems/tree/master/0020-Valid%20Parentheses/src)
 
 
-## [队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/Queue.java)
+### [队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/Queue.java)
 
 队列也是一种线性结构，特点是先进先出。只能从队尾添加元素，从队首取出元素，树结构的广度优先遍历使用了这个特性。依然可以通过数组实现[数组队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/ArrayQueue.java), 也可以通过链表实现[链表队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/LinkedListQueue.java)。数组队列可以优化为[循环队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/LoopQueue.java)。
 循环队列中声明head为头节点，tail为最后一个节点的下一个节点，size为队列的长度。判断该队列是否为空的条件是`front==tail`，判断是否已满的条件是`(tail+1) % size == front`。
 
-## [链表](https://github.com/mohong/play-with-data-structures/blob/master/04_LinkedList/src/LinkedList.java)
+### [链表](https://github.com/mohong/play-with-data-structures/blob/master/04_LinkedList/src/LinkedList.java)
 
 为链表设置虚拟头节点可以更好的处理问题。
 
