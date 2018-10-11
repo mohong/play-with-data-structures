@@ -1,6 +1,30 @@
 # play-with-data-structures
 
-Java实现常见数据结构，来源于[liuyubobobo](https://github.com/liuyubobobo/Play-with-Data-Structures)老师的课程资料
+>Java实现常见数据结构，来源于[liuyubobobo](https://github.com/liuyubobobo/Play-with-Data-Structures)老师的课程资料
+
+## 目录
+
+- 01 数组
+    - [动态数组](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java)
+- 02 栈
+    - [数组栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/ArrayStack.java)
+    - [链表栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/LinkedListStack.java)
+- 03 队列
+    - [数组队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/ArrayQueue.java)
+    - [链表队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/LinkedListQueue.java)
+    - [循环队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/LoopQueue.java)
+- 04 链表
+    - [链表](https://github.com/mohong/play-with-data-structures/blob/master/04_LinkedList/src/LinkedList.java)
+- 05 二分搜索树
+    - [二分搜索树](https://github.com/mohong/play-with-data-structures/blob/master/05_BST/src/BST.java)
+- 06 集合
+    - [基于链表的集合](https://github.com/mohong/play-with-data-structures/blob/master/06_Set/src/LinkedListSet.java)
+    - [基于二分搜索树的集合](https://github.com/mohong/play-with-data-structures/blob/master/06_Set/src/BSTSet.java)
+- 07 映射
+    - [基于链表的映射](https://github.com/mohong/play-with-data-structures/blob/master/07_Map/src/LinkedListMap.java)
+    - [基于二分搜索树的映射](https://github.com/mohong/play-with-data-structures/blob/master/07_Map/src/BSTMap.java)
+
+
 
 ## [数组](https://github.com/mohong/play-with-data-structures/blob/master/01_Array/src/Array.java)
 
@@ -10,6 +34,11 @@ Java实现常见数据结构，来源于[liuyubobobo](https://github.com/liuyubo
 
 栈是一种线性结构，特点是后进先出。操作有"括号匹配"、"系统栈的调用"、"编辑器的undo操作"等。操作有"压栈弹栈"等。
 由于是线性结构，可以通过数组实现[数组栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/ArrayStack.java)，也可以通过链表实现[链表栈](https://github.com/mohong/play-with-data-structures/blob/master/02_Stack/src/LinkedListStack.java)。
+
+栈相关的题目
+
+[有效的括号](https://github.com/mohong/leetcode-problems/tree/master/0020-Valid%20Parentheses/src)
+
 
 ## [队列](https://github.com/mohong/play-with-data-structures/blob/master/03_Queue/src/Queue.java)
 
